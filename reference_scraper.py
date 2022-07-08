@@ -70,7 +70,7 @@ cbcr_secondary_deadline_parameters = "> CbCR preparation and submission(.*?)> Cb
 cbcr_notification_secondary_deadline_parameters = "> CbCR notification(.*?)b\)"
 tpdoc_prep_deadline_parameters = "Transfer pricing documentation/Local File preparation deadline(.*?)c\) Transfer pricing"
 tpdoc_submit_deadline_parameters = "or Local File\?(.*?)> Time period"
-tpdoc_request_deadline_parameters = "> Time period or deadline(.*?)d\)"
+tpdoc_request_deadline_parameters = "> Time period or deadline for submission on tax authority request(.*?)d\)"
 local_comps_parameters = "Local vs. regional comparables(.*?)> Single-year"
 new_search_parameters = "> Fresh benchmarking search every year vs. rollforwards and update of the financials(.*?)> Simple"
 penalty_parameters = "a\) Penalty exposure(.*?)b\)"
@@ -138,6 +138,7 @@ processSecondaryInfo(deadline_first_parameters, cbcr_secondary_deadline_paramete
 processSecondaryInfo(deadline_first_parameters, cbcr_notification_secondary_deadline_parameters,"CbCR Notification Deadlines", countries)
 processInfo(tpdoc_prep_deadline_parameters, "TP Doc Preparation Deadline", countries)
 processInfo(tpdoc_submit_deadline_parameters, "TP Doc Submit Deadline", countries)
+processInfo(tpdoc_request_deadline_parameters, "Submit Upon Request Timeline", countries)
 processInfo(local_comps_parameters, "Local vs Regional Comparables", countries)
 processInfo(new_search_parameters, "Are New Searches Required Each Year?", countries)
 processInfo(penalty_parameters, "Penalties", countries)
